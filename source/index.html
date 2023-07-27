@@ -7,13 +7,102 @@
     <meta name="description" content="Описание проекта">
     <title>ProjectName</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/alumni-sans-semibold.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="page-header header">
+        <div class="page-header__container container">
+          <a class="page-header__logo" href="#">
+            SUPERGYM
+          </a>
+          <a class="page-header__tel" href="tel:+78005555555">
+            8-800-555-55-55
+          </a>
+        </div>
       </header>
       <main>
+        <h1 class="visually-hidden">
+          Сайт Фитнес-центра.
+        </h1>
+        <section class="hero-block container">
+          <div class="hero-block__text-area">
+            <h2>
+              ФИТНЕС<br>ЦЕНТР
+            </h2>
+            <span>
+              омск
+            </span>
+            <ul class="hero-block__services-list">
+              <li>
+                Тренажёрный зал
+              </li>
+              <li>
+                Групповые занятия
+              </li>
+              <li>
+                Кардио-зона
+              </li>
+            </ul>
+            <a class="hero-block__button button" href="#subscriptions">
+              Купить абонемент
+            </a>
+          </div>
+          <picture>
+<!--            <source type="image/webp" media="(max-width: 1199px)" srcset="img/hero-image-tablet-1x.webp 1x, img/hero-image-tablet-2x.webp 2x">-->
+            <source media="(max-width: 1199px)" srcset="img/hero-image-tablet-1x.jpg 1x, img/hero-image-tablet-2x.jpg 2x">
+<!--            <source type="image/webp" srcset="img/hero-image-desktop-1x.webp 1x, img/hero-image-desktop-2x.webp 2x">-->
+            <img src="img/hero-image-desktop-1x.jpg" srcset="img/hero-image-desktop-2x.jpg 2x" width="500" height="556" alt="Мужчина в футболке супермэна.">
+          </picture>
+        </section>
+        <section class="gym container">
+          <div class="gym__text-block">
+            <h2>
+              Тренажерный зал
+            </h2>
+            <span>
+              Просторный зал площадью 900 кв/м
+            </span>
+            <p>
+              Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья. Тренажерный зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+            </p>
+            <div class="gym__desktop-only-paragraph">
+              <p>
+                В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.
+              </p>
+            </div>
+          </div>
+          <div class="gym__visual-content">
+            <picture>
+<!--              <source type="image/webp" media="(max-width: 767px)" srcset="img/gym-mobile-1x.webp 1x, img/gym-mobile-2x.webp 2x">-->
+              <source media="(max-width: 767px)" srcset="img/gym-mobile-1x.jpg 1x, img/gym-mobile-2x.jpg 2x">
+<!--              <source type="image/webp" media="(max-width: 1199px)" srcset="img/gym-tablet-1x.webp 1x, img/gym-tablet-2x.webp 2x">-->
+              <source media="(max-width: 1199px)" srcset="img/gym-tablet-1x.jpg 1x, img/gym-tablet-2x.jpg 2x">
+<!--              <source type="image/webp" srcset="img/gym-desktop-1x.webp 1x, img/gym-desktop-2x.webp 2x">-->
+              <img src="img/gym-desktop-1x.jpg" srcset="img/gym-desktop-2x.jpg 2x" width="660" height="401">
+            </picture>
+            <div class="gym__video-wrapper" data-id="video-wrapper">
+              <picture>
+<!--                <source type="image/webp" media="(max-width: 767px)" srcset="img/video-mobile-1x.webp 1x, img/video-mobile-2x.webp 2x">-->
+                <source media="(max-width: 767px)" srcset="img/video-mobile-1x.jpg 1x, img/video-mobile-2x.jpg 2x">
+<!--                <source type="image/webp" media="(max-width: 1199px)" srcset="img/video-tablet-1x.webp 1x, img/video-tablet-2x.webp 2x">-->
+                <source media="(max-width: 1199px)" srcset="img/video-tablet-1x.jpg 1x, img/video-tablet-2x.jpg 2x">
+<!--                <source type="image/webp" srcset="img/video-desktop-1x.webp 1x, img/video-desktop-2x.webp 2x">-->
+                <img src="img/video-desktop-1x.jpg" srcset="img/video-desktop-2x.jpg 2x" width="364" height="228">
+              </picture>
+              <button class="gym__video-button" type="button" data-id="video-button">
+                <svg width="17" height="17">
+                  <use xlink:href="img/sprite.svg#polygon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="subscriptions" id="subscriptions">
+
+        </section>
+
 <!--        <section class="intro">-->
 <!--          <div class="container">-->
 <!--            <h1>Тестовая страница.</h1>-->
@@ -23,43 +112,105 @@
 <!--            <p><a class="btn" href="#" data-open-modal="success">modal&#45;&#45;success link</a></p>-->
 <!--          </div>-->
 <!--        </section>-->
-        dmkfd
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="page-footer footer">
+        <div class="page-footer__container container">
+            <a class="page-footer__logo" href="#">
+              SUPERGYM
+            </a>
+            <ul class="page-footer__navigation-list">
+              <li>
+                <a href="#">
+                  Услуги
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Абонементы
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Акции
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Тренеры
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  Расписание
+                </a>
+              </li>
+            </ul>
+          <ul class="page-footer__social-list">
+            <li>
+              <a href="#">
+                <span class="visually-hidden">
+                  Vkontakte.
+                </span>
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">
+                  Одноклассники.
+                </span>
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="visually-hidden">
+                  Reddit.
+                </span>
+                <svg width="25" height="25">
+                  <use xlink:href="img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </footer>
     </div>
 
     <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+<!--    <div class="modal modal&#45;&#45;preload" data-modal="feedback">-->
+<!--      <div class="modal__wrapper">-->
+<!--        <div class="modal__overlay" data-close-modal></div>-->
+<!--        <div class="modal__content">-->
+<!--          <p class="modal__description">Обычная модалка</p>-->
+<!--          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>-->
+<!--            <svg width="15" height="15">-->
+<!--              <use xlink:href="img/sprite.svg#icon-close"></use>-->
+<!--            </svg>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+<!--    <div class="modal modal&#45;&#45;preload modal&#45;&#45;fit-content modal&#45;&#45;no-scale" data-modal="success">-->
+<!--      <div class="modal__wrapper">-->
+<!--        <div class="modal__overlay" data-close-modal></div>-->
+<!--        <div class="modal__content">-->
+<!--          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>-->
+<!--          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>-->
+<!--            <svg width="15" height="15">-->
+<!--              <use xlink:href="img/sprite.svg#icon-close"></use>-->
+<!--            </svg>-->
+<!--          </button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <script src="js/vendor.min.js"></script>
+<!--    <script src="js/vendor.min.js"></script>-->
     <script src="js/main.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,140 @@
+.hero-block {
+  display: flex;
+  /*может, сделать flex-start и просто подобрать gap в процентах?*/
+  justify-content: space-between;
+  padding: 51px 303px 51px 195px;
+  background: conic-gradient(from 151deg at 16.03% 39.06%, $color-dark-cerulean 32.23634deg, $color-venetian-red 304deg, $color-dark-cerulean 360deg);
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    padding: 82px 45px;
+  }
+
+  @include vp-767 {
+    padding: 115px 14px 80px;
+  }
+
+  h2 {
+    margin: 0;
+
+    font-family: "Alumni Sans", "Arial", sans-serif;
+    -webkit-text-stroke: 2px $color-default-white;
+    font-size: 92px;
+    line-height: 110px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+
+    @include vp-1199 {
+      font-size: 72px;
+      line-height: 86px;
+      letter-spacing: 3.6px;
+    }
+
+    @include vp-767 {
+      font-size: 72px;
+      line-height: 86px;
+      letter-spacing: 3.6px;
+    }
+  }
+
+  span {
+    font-family: "Alumni Sans", "Arial", sans-serif;
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 1.44px;
+
+    order: -1;
+    margin-bottom: 20px;
+
+    @include vp-1199 {
+      font-size: 24px;
+      line-height: 31px;
+      letter-spacing: 1.02px;
+    }
+
+    @include vp-767 {
+      font-size: 28px;
+      line-height: 34px;
+      letter-spacing: 0.84px;
+    }
+  }
+
+  picture {
+    flex: none;
+  }
+
+  img {
+    @include vp-1199 {
+      width: 324px;
+      height: 390px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+}
+
+.hero-block__text-area {
+  display: flex;
+  width: 37%;
+  flex-direction: column;
+  padding: 115px 20px 42px;
+  position: relative;
+
+  @include vp-1199 {
+    padding: 57px 20px 25px;
+    width: 51%;
+  }
+
+  @include vp-767 {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+.hero-block__services-list {
+  list-style-type: none;
+  margin: 0;
+  margin-top: auto;
+  padding: 0;
+  position: absolute;
+  top: 305px;
+  left: -73px;
+
+  @include vp-1199 {
+    top: 187px;
+    left: 0;
+  }
+
+  @include vp-767 {
+    top: 120px;
+  }
+
+  li {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: right;
+
+    @include vp-1199 {
+      font-size: 14px;
+      line-height: 21px;
+    }
+  }
+}
+
+
+.hero-block__button {
+  margin-top: auto;
+  margin-left: auto;
+
+  @include vp-767 {
+    margin: 0;
+  }
+}
