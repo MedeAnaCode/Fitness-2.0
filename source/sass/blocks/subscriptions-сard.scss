@@ -1,0 +1,141 @@
+.subscriptions-card {
+  color: $color-sapphire;
+  background-color: $color-default-white;
+  padding: 60px 77px 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-1199 {
+    padding: 63px 118px 66px;
+  }
+
+  @include vp-767 {
+    padding: 51px 42px 55px;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0;
+    margin-bottom: 6px;
+    display: block;
+
+    @include vp-1199 {
+      margin-bottom: 10px;
+    }
+
+    @include vp-767 {
+      font-size: 22px;
+      line-height: 24px;
+    }
+  }
+
+  span {
+    text-align: center;
+
+    @include vp-1199 {
+      margin-bottom: 12px;
+    }
+
+    @include vp-767 {
+      margin-bottom: 10px;
+    }
+  }
+
+  &:hover {
+    border-image: $red-to-blue 30;
+    border-width: 7px;
+    border-style: solid;
+    box-sizing: border-box;
+    padding: 53px 70px 61px;
+
+    @include vp-1199 {
+      padding: 56px 111px 59px;
+    }
+
+    .subscriptions-card__button {
+      background: $red-to-blue;
+      color: $color-default-white;
+      border: none;
+      padding: 24px 40px;
+    }
+  }
+}
+
+.subscriptions-card__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 34px;
+
+  @include vp-1199 {
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 32px;
+  }
+
+  span {
+    color: $color-whisper;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 150px;
+    display: block;
+    margin: 0;
+    text-align: center;
+
+    @include vp-767 {
+      font-size: 80px;
+      line-height: 120px;
+    }
+  }
+
+  b {
+    color: $color-egyptian-blue;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 90px;
+    margin: 0;
+    margin-top: -80px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+
+    @include vp-1199 {
+      margin-top: -95px;
+    }
+
+    @include vp-767 {
+      font-size: 48px;
+      line-height: 72px;
+      gap: 10px;
+      margin-top: -76px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      background-image: url("../img/svg/ruble.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 30px;
+      height: 42px;
+      flex: none;
+
+      @include vp-767 {
+        width: 24px;
+        height: 33px;
+      }
+    }
+  }
+}
+
+.subscriptions-card__button {
+  align-self: stretch;
+  width: 100%;
+}

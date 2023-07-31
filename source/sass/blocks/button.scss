@@ -1,5 +1,5 @@
 .button {
-  padding: 20px 56px;
+  padding: 20px 40px;
   background-color: transparent;
   border: 4px solid $color-default-white;
 
@@ -14,5 +14,10 @@
 
   @include vp-1199 {
     padding: 20px 33px;
+  }
+
+  &--dark {
+    color: $color-sapphire;
+    border-color: $color-sapphire;
   }
 }
