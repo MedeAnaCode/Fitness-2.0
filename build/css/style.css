@@ -2137,6 +2137,7 @@ button,
 }
 
 .page-header__container {
+  width: 100%;
   position: absolute;
   top: 0;
   display: -webkit-box;
@@ -2985,6 +2986,7 @@ button,
 @media (max-width: 767px) {
   .super-games {
     padding-top: 70px;
+    padding-bottom: 60px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3170,6 +3172,209 @@ button,
     font-size: 10px;
     line-height: 12px;
     letter-spacing: 0.5px;
+  }
+}
+
+.trainers {
+  padding-top: 8px;
+  padding-bottom: 105px;
+  position: relative;
+}
+@media (max-width: 1199px) {
+  .trainers {
+    padding: 0 95px 105px;
+  }
+}
+@media (max-width: 767px) {
+  .trainers {
+    padding: 0 47px 70px;
+  }
+}
+.trainers h2 {
+  color: #102654;
+  font-family: "Alumni Sans", "Arial", sans-serif;
+  font-size: 54px;
+  font-weight: 600;
+  line-height: 65px;
+  letter-spacing: 1.62px;
+  margin: 0;
+  margin-bottom: 31px;
+}
+@media (max-width: 1199px) {
+  .trainers h2 {
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 1.26px;
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .trainers h2 {
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: 0.96px;
+    margin-bottom: 40px;
+  }
+}
+
+.trainers__slide {
+  position: relative;
+  width: 260px;
+  height: 294px;
+  margin: 0 auto;
+}
+@media (max-width: 1199px) {
+  .trainers__slide {
+    width: 268px;
+    height: 294px;
+  }
+}
+@media (max-width: 767px) {
+  .trainers__slide {
+    width: 226px;
+    height: 274px;
+  }
+}
+.trainers__slide picture {
+  display: block;
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1199px) {
+  .trainers__slide picture {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .trainers__slide picture {
+    width: 100%;
+    height: 100%;
+  }
+}
+.trainers__slide img {
+  display: block;
+  width: auto;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1199px) {
+  .trainers__slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .trainers__slide img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.trainers__slide:hover::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(16, 38, 84, 0.89);
+}
+.trainers__slide:hover .trainers__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.trainers__slide:hover .trainers__text-block {
+  top: 0;
+  bottom: auto;
+  margin: 0 auto;
+}
+
+.trainers__text-block {
+  color: #ffffff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  padding: 44px 4px 22px;
+}
+.trainers__text-block h3 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  margin: auto;
+}
+
+.trainers__info {
+  margin: 0 auto;
+  display: none;
+}
+.trainers__info span {
+  color: #b6bdcc;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 28px;
+}
+.trainers__info ul {
+  margin: 0;
+  padding: 0 0 0 45px;
+}
+.trainers__info li {
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 13px;
+}
+
+.trainers__button {
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: #afafaf;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.trainers__button--prev {
+  left: 38px;
+  -webkit-transform: translate(0, 8px);
+      -ms-transform: translate(0, 8px);
+          transform: translate(0, 8px);
+}
+@media (max-width: 1199px) {
+  .trainers__button--prev {
+    -webkit-transform: translate(0, -11px);
+        -ms-transform: translate(0, -11px);
+            transform: translate(0, -11px);
+  }
+}
+
+.trainers__button--next {
+  right: 38px;
+  -webkit-transform: translate(0, 8px) rotate(180deg);
+      -ms-transform: translate(0, 8px) rotate(180deg);
+          transform: translate(0, 8px) rotate(180deg);
+}
+@media (max-width: 1199px) {
+  .trainers__button--next {
+    -webkit-transform: translate(0, -11px) rotate(180deg);
+        -ms-transform: translate(0, -11px) rotate(180deg);
+            transform: translate(0, -11px) rotate(180deg);
   }
 }
 

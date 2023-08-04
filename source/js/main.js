@@ -3,6 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {playVideo} from './modules/video-play';
 import {initTabs} from './modules/init-tabs';
+import {initSwiper} from "./modules/slider.js";
 
 // ---------------------------------
 
@@ -18,6 +19,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   playVideo();
   initTabs();
+  initSwiper();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
