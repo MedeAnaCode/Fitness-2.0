@@ -10,24 +10,38 @@
 
   @include vp-767 {
     padding-top: 70px;
-    padding-bottom: 60px;
+    padding-bottom: 63px;
     flex-direction: column;
   }
 
+  span {
+    word-break: break-word;
+  }
+}
+
+.super-games__picture {
+  height: 500px;
+  flex-grow: 2;
+  overflow: hidden;
+
+  @include vp-1199 {
+    height: 292px;
+  }
+
+  @include vp-767 {
+    height: auto;
+  }
+
   picture {
-    flex: none;
-    width: 660px;
-    height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
-    @include vp-1199 {
-      width: 386px;
-      height: 292px;
-    }
-
-    @include vp-767 {
-      width: 100%;
-      height: auto;
-    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -38,14 +52,18 @@
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
-  flex-grow: 1;
+  flex-grow: 2;
+  width: 500px;
 
   @include vp-1199 {
-    padding: 43px 42px 48px;
+    padding: 43px 42px 46px;
+    width: 292px;
   }
 
   @include vp-767 {
-    padding: 47px 44px;
+    max-width: 100%;
+    width: 100%;
+    padding: 44px 44px 46px;
   }
 
   h2 {
@@ -56,8 +74,11 @@
     font-weight: 600;
     line-height: 78.72px;
     letter-spacing: 2.46px;
+    word-break: break-word;
+    width: 201px;
 
     @include vp-1199 {
+      width: 126px;
       margin: auto 0;
       font-size: 48px;
       line-height: 46px;
@@ -71,6 +92,7 @@
     grid-column: 1 / -1;
     margin: 0;
     margin-bottom: 45px;
+    word-break: break-word;
 
     @include vp-1199 {
       font-size: 12px;
@@ -145,11 +167,12 @@
 }
 
 .super-games__normal {
-  width: min-content;
+  width: 37px;
   font-size: 14px;
   line-height: 21px;
 
   @include vp-1199 {
+    width: 26px;
     font-size: 10px;
     line-height: 15px;
   }

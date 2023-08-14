@@ -5,9 +5,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 360px;
 
   @include vp-1199 {
     padding: 63px 118px 66px;
+    max-width: 442px;
   }
 
   @include vp-767 {
@@ -22,6 +24,7 @@
     margin: 0;
     margin-bottom: 6px;
     display: block;
+    word-break: break-word;
 
     @include vp-1199 {
       margin-bottom: 10px;
@@ -35,6 +38,8 @@
 
   span {
     text-align: center;
+    word-break: break-word;
+    margin-bottom: 16px;
 
     @include vp-1199 {
       margin-bottom: 12px;
@@ -45,22 +50,34 @@
     }
   }
 
-  &:hover {
-    border-image: $red-to-blue 30;
+  @include hover-focus {
+    border-image: $torch-red-to-dark-cerulean 30;
     border-width: 7px;
     border-style: solid;
     box-sizing: border-box;
     padding: 53px 70px 61px;
+    outline-offset: -7px;
 
     @include vp-1199 {
       padding: 56px 111px 59px;
     }
 
+    @include vp-767 {
+      padding: 44px 35px 48px;
+    }
+
     .subscriptions-card__button {
-      background: $red-to-blue;
+      background: $torch-red-to-dark-cerulean;
       color: $color-default-white;
       border: none;
-      padding: 24px 40px;
+      padding: 24px 44px;
+      outline-offset: 4px;
+
+      @include vp-1199 {
+        padding: 24px 37px;
+        width: 100%;
+        align-self: stretch;
+      }
     }
   }
 }
@@ -69,7 +86,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 34px;
+  margin-bottom: 37px;
+  word-break: break-word;
 
   @include vp-1199 {
     margin-bottom: 36px;
@@ -87,8 +105,11 @@
     display: block;
     margin: 0;
     text-align: center;
+    word-break: break-word;
+    width: 256px;
 
     @include vp-767 {
+      width: 220px;
       font-size: 80px;
       line-height: 120px;
     }
@@ -100,17 +121,20 @@
     font-size: 60px;
     font-weight: 700;
     line-height: 90px;
-    margin: 0;
-    margin-top: -80px;
+    margin: -98px auto 0;
     display: flex;
     gap: 14px;
     align-items: center;
+    word-break: break-word;
+    width: 196px;
+    justify-content: center;
 
     @include vp-1199 {
       margin-top: -95px;
     }
 
     @include vp-767 {
+      width: 156px;
       font-size: 48px;
       line-height: 72px;
       gap: 10px;
@@ -138,4 +162,22 @@
 .subscriptions-card__button {
   align-self: stretch;
   width: 100%;
+
+  &:active {
+    background: $torch-red-to-dark-cerulean;
+    color: rgba($color-default-white, 0.7);
+    border: none;
+    padding: 24px 44px;
+    outline-offset: 4px;
+
+    @include vp-1199 {
+      padding: 24px 37px;
+      width: 100%;
+      align-self: stretch;
+    }
+  }
+
+  &--disabled {
+    opacity: 0.3;
+  }
 }

@@ -11,9 +11,26 @@
   letter-spacing: 0.6px;
   text-transform: uppercase;
   text-align: center;
+  cursor: pointer;
+  word-break: break-word;
 
   @include vp-1199 {
     padding: 20px 33px;
+  }
+
+  @include hover-focus {
+    background-color: $color-default-white;
+    color: $color-egyptian-blue;
+  }
+
+  &:active {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
+
+  &--disabled,
+  &:disabled {
+    opacity: 0.5;
   }
 
   &--dark {

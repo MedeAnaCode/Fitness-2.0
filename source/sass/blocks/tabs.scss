@@ -4,6 +4,7 @@
   &__controls {
     width: max-content;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 46px;
     margin: 0 auto 39px;
@@ -31,6 +32,8 @@
     opacity: 0.5;
     padding: 20px 0 10px;
     cursor: pointer;
+    word-break: break-word;
+    max-width: 100px;
 
     @include vp-1199 {
       font-size: 18px;
@@ -55,7 +58,7 @@
         height: 2px;
         background-color: $color-crimson;
         position: absolute;
-        bottom: -2px
+        bottom: -2px;
       }
     }
   }

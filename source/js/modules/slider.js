@@ -1,5 +1,5 @@
-function initSwiper () {
-  let swiper = new Swiper('.swiper', {
+function initSwiper1() {
+  let swiper = new Swiper('.trainers__slider', {
     loop: true,
     navigation: {
       nextEl: '.trainers__button--next',
@@ -26,4 +26,4 @@ function initSwiper () {
   });
 }
 
-export {initSwiper};
+export {initSwiper1};
