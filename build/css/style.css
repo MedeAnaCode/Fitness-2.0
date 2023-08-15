@@ -1521,13 +1521,7 @@ button,
     padding: 20px 33px;
   }
 }
-@media (hover: hover) {
-  .button:hover:not(.focus-visible) {
-    background-color: #ffffff;
-    color: #103aae;
-  }
-}
-.button.focus-visible:focus {
+.button:hover, .button:focus {
   background-color: #ffffff;
   color: #103aae;
 }
@@ -1570,12 +1564,7 @@ button,
     height: 19px;
   }
 }
-@media (hover: hover) {
-  .slider-button:hover:not(.focus-visible) {
-    border: 1px solid #102654;
-  }
-}
-.slider-button.focus-visible:focus {
+.slider-button:hover, .slider-button:focus {
   border: 1px solid #102654;
 }
 .slider-button:active {
@@ -2716,38 +2705,28 @@ button,
     background-image: url("../img/video-button-2x.png");
   }
 }
-@media (hover: hover) {
-  .gym__video-button:hover:not(.focus-visible) {
-    background-image: url("../img/video-button-hover-focus-1x.png");
-  }
-}
-@media (hover: hover) and (-webkit-min-device-pixel-ratio: 1.5), (hover: hover) and (min-resolution: 144dpi), (hover: hover) and (-webkit-min-device-pixel-ratio: 2), (hover: hover) and (min-resolution: 2dppx) {
-  .gym__video-button:hover:not(.focus-visible) {
-    background-image: url("../img/video-button-hover-focus-2x.png");
-  }
-}
-.gym__video-button.focus-visible:focus {
+.gym__video-button:hover, .gym__video-button:focus {
   background-image: url("../img/video-button-hover-focus-1x.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .gym__video-button.focus-visible:focus {
+  .gym__video-button:hover, .gym__video-button:focus {
     background-image: url("../img/video-button-hover-focus-2x.png");
   }
 }
-.gym__video-button.focus-visible:active {
+.gym__video-button:active {
   background-image: url("../img/video-button-active-1x.png");
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .gym__video-button.focus-visible:active {
+  .gym__video-button:active {
     background-image: url("../img/video-button-active-2x.png");
   }
 }
-.gym__video-button--disabled {
+.gym__video-button:disabled, .gym__video-button--disabled {
   background-image: url("../img/video-button-hover-focus-1x.png");
   opacity: 0.4;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-  .gym__video-button--disabled {
+  .gym__video-button:disabled, .gym__video-button--disabled {
     background-image: url("../img/video-button-hover-focus-2x.png");
   }
 }
@@ -3039,47 +3018,7 @@ button,
     margin-bottom: 10px;
   }
 }
-@media (hover: hover) {
-  .subscriptions-card:hover:not(.focus-visible) {
-    -o-border-image: linear-gradient(151deg, #ed0233 0%, #003d85 100%) 30;
-       border-image: linear-gradient(151deg, #ed0233 0%, #003d85 100%) 30;
-    border-width: 7px;
-    border-style: solid;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    padding: 53px 70px 61px;
-    outline-offset: -7px;
-  }
-}
-@media (hover: hover) and (max-width: 1199px) {
-  .subscriptions-card:hover:not(.focus-visible) {
-    padding: 56px 111px 59px;
-  }
-}
-@media (hover: hover) and (max-width: 767px) {
-  .subscriptions-card:hover:not(.focus-visible) {
-    padding: 44px 35px 48px;
-  }
-}
-@media (hover: hover) {
-  .subscriptions-card:hover:not(.focus-visible) .subscriptions-card__button {
-    background: linear-gradient(151deg, #ed0233 0%, #003d85 100%);
-    color: #ffffff;
-    border: none;
-    padding: 24px 44px;
-    outline-offset: 4px;
-  }
-}
-@media (hover: hover) and (max-width: 1199px) {
-  .subscriptions-card:hover:not(.focus-visible) .subscriptions-card__button {
-    padding: 24px 37px;
-    width: 100%;
-    -ms-flex-item-align: stretch;
-        -ms-grid-row-align: stretch;
-        align-self: stretch;
-  }
-}
-.subscriptions-card.focus-visible:focus {
+.subscriptions-card:hover, .subscriptions-card:focus {
   -o-border-image: linear-gradient(151deg, #ed0233 0%, #003d85 100%) 30;
      border-image: linear-gradient(151deg, #ed0233 0%, #003d85 100%) 30;
   border-width: 7px;
@@ -3090,16 +3029,16 @@ button,
   outline-offset: -7px;
 }
 @media (max-width: 1199px) {
-  .subscriptions-card.focus-visible:focus {
+  .subscriptions-card:hover, .subscriptions-card:focus {
     padding: 56px 111px 59px;
   }
 }
 @media (max-width: 767px) {
-  .subscriptions-card.focus-visible:focus {
+  .subscriptions-card:hover, .subscriptions-card:focus {
     padding: 44px 35px 48px;
   }
 }
-.subscriptions-card.focus-visible:focus .subscriptions-card__button {
+.subscriptions-card:hover .subscriptions-card__button, .subscriptions-card:focus .subscriptions-card__button {
   background: linear-gradient(151deg, #ed0233 0%, #003d85 100%);
   color: #ffffff;
   border: none;
@@ -3107,7 +3046,7 @@ button,
   outline-offset: 4px;
 }
 @media (max-width: 1199px) {
-  .subscriptions-card.focus-visible:focus .subscriptions-card__button {
+  .subscriptions-card:hover .subscriptions-card__button, .subscriptions-card:focus .subscriptions-card__button {
     padding: 24px 37px;
     width: 100%;
     -ms-flex-item-align: stretch;
@@ -4481,12 +4420,7 @@ button,
     padding: 13px 30px;
   }
 }
-@media (hover: hover) {
-  .faq-tabs__control:hover:not(.focus-visible) {
-    border-color: #102654;
-  }
-}
-.faq-tabs__control.focus-visible:focus {
+.faq-tabs__control:hover, .faq-tabs__control:focus {
   border-color: #102654;
 }
 .faq-tabs__control:active, .faq-tabs__control.is-active {
@@ -4618,26 +4552,14 @@ button,
     width: 12px;
   }
 }
-@media (hover: hover) {
-  .accordion__button:hover:not(.focus-visible) {
-    border-color: #102654;
-    background-color: #102654;
-  }
-  .accordion__button:hover:not(.focus-visible)::before {
-    background-color: #ffffff;
-  }
-  .accordion__button:hover:not(.focus-visible)::after {
-    background-color: #ffffff;
-  }
-}
-.accordion__button.focus-visible:focus {
+.accordion__button:hover, .accordion__button:focus {
   border-color: #102654;
   background-color: #102654;
 }
-.accordion__button.focus-visible:focus::before {
+.accordion__button:hover::before, .accordion__button:focus::before {
   background-color: #ffffff;
 }
-.accordion__button.focus-visible:focus::after {
+.accordion__button:hover::after, .accordion__button:focus::after {
   background-color: #ffffff;
 }
 .accordion__button--disabled, .accordion__button:disabled {
@@ -4822,6 +4744,7 @@ button,
   top: 0;
   bottom: 0;
   margin: auto 0;
+  z-index: 2;
 }
 
 .reviews__button--prev {
@@ -4967,29 +4890,27 @@ button,
   padding: 6px;
   padding-left: 0;
 }
-@media (hover: hover) {
-  .free-lesson__form input:hover:not(.focus-visible) {
-    border-bottom: 1px solid #ffffff;
-    outline: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-  }
+.free-lesson__form input:hover {
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
-.free-lesson__form input.focus-visible:focus {
+.free-lesson__form input:focus {
   border: 1px solid #ffffff;
   border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.free-lesson__form input.focus-visible:active {
+.free-lesson__form input:active {
   border: 1px solid #ffffff;
   border-radius: 0;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.free-lesson__form input--disabled {
+.free-lesson__form input:disabled, .free-lesson__form input--disabled {
   opacity: 0.4;
 }
 .free-lesson__form input::-webkit-input-placeholder {
@@ -5236,10 +5157,10 @@ button,
 }
 @media (max-width: 767px) {
   .page-footer__logo {
-    width: 69px;
-    height: 24px;
-    padding-top: 6px;
-    margin: 0 0 16px;
+    width: 79px;
+    height: 30px;
+    padding: 6px 5px 0;
+    margin: 0 0 10px;
   }
 }
 
@@ -5252,11 +5173,11 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 }
 @media (max-width: 1199px) {
   .page-footer__navigation-list {
-    gap: 30px;
+    gap: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -5279,15 +5200,24 @@ button,
   }
 }
 
-@media (hover: hover) {
-  .page-footer__navigation-item:hover:not(.focus-visible) {
-    border-bottom: 1px solid #ffffff;
+.page-footer__navigation-item a {
+  padding: 5px 10px;
+}
+@media (max-width: 767px) {
+  .page-footer__navigation-item a {
+    padding: 5px;
   }
 }
-.page-footer__navigation-item.focus-visible:focus {
-  border: 1px solid #ffffff;
+.page-footer__navigation-item a:hover {
+  border-bottom: 1px solid #ffffff;
 }
-.page-footer__navigation-item.focus-visible:active {
+.page-footer__navigation-item a:focus {
+  border: 1px solid #ffffff;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.page-footer__navigation-item a:active {
   border: none;
 }
 .page-footer__navigation-item--disabled {
@@ -5331,18 +5261,10 @@ button,
   height: 25px;
   border-radius: 50%;
 }
-@media (hover: hover) {
-  .page-footer__social-item:hover:not(.focus-visible) {
-    background-color: #ffffff;
-  }
-  .page-footer__social-item:hover:not(.focus-visible) svg {
-    color: #103aae;
-  }
-}
-.page-footer__social-item.focus-visible:focus {
+.page-footer__social-item:hover, .page-footer__social-item:focus {
   background-color: #ffffff;
 }
-.page-footer__social-item.focus-visible:focus svg {
+.page-footer__social-item:hover svg, .page-footer__social-item:focus svg {
   color: #103aae;
 }
 .page-footer__social-item:active {

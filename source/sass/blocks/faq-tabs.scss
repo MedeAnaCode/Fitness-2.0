@@ -48,7 +48,8 @@
     padding: 13px 30px;
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     border-color: $color-sapphire;
   }
 

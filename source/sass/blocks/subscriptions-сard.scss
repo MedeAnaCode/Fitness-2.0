@@ -50,7 +50,8 @@
     }
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     border-image: $torch-red-to-dark-cerulean 30;
     border-width: 7px;
     border-style: solid;

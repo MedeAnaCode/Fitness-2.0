@@ -18,7 +18,8 @@
     padding: 20px 33px;
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     background-color: $color-default-white;
     color: $color-egyptian-blue;
   }

@@ -214,7 +214,8 @@
     background-image: url("../img/video-button-2x.png");
   }
 
-  @include hover-focus {
+  &:hover,
+  &:focus{
     background-image: url("../img/video-button-hover-focus-1x.png");
 
     @include retina {
@@ -222,7 +223,7 @@
     }
   }
 
-  @include active {
+  &:active {
     background-image: url("../img/video-button-active-1x.png");
 
     @include retina {
@@ -230,6 +231,7 @@
     }
   }
 
+  &:disabled,
   &--disabled {
     background-image: url("../img/video-button-hover-focus-1x.png");
 

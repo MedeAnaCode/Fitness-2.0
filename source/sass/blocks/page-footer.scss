@@ -29,10 +29,10 @@
   }
 
   @include vp-767 {
-    width: 69px;
-    height: 24px;
-    padding-top: 6px;
-    margin: 0 0 16px;
+    width: 79px;
+    height: 30px;
+    padding: 6px 5px 0;
+    margin: 0 0 10px;
   }
 }
 
@@ -42,10 +42,10 @@
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
 
   @include vp-1199 {
-    gap: 30px;
+    gap: 10px;
   }
 
   @include vp-767 {
@@ -68,15 +68,25 @@
 }
 
 .page-footer__navigation-item {
-  @include hover {
+  a {
+    padding: 5px 10px;
+
+    @include vp-767 {
+      padding: 5px;
+    }
+  }
+
+  a:hover {
     border-bottom: 1px solid $color-default-white;
   }
 
-  @include focus {
+  a:focus {
     border: 1px solid $color-default-white;
+    outline: none;
+    box-shadow: none;
   }
 
-  @include active {
+  a:active {
     border: none;
   }
 
@@ -117,7 +127,8 @@
   height: 25px;
   border-radius: 50%;
 
-  @include hover-focus {
+  &:hover,
+  &:focus {
     background-color: $color-default-white;
 
     svg {

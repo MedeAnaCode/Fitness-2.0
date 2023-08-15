@@ -99,7 +99,8 @@
       }
     }
 
-    @include hover-focus {
+    &:hover,
+    &:focus {
       border-color: $color-sapphire;
       background-color: $color-sapphire;
 

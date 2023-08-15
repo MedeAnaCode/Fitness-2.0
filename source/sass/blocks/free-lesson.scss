@@ -74,26 +74,27 @@
     padding: 6px;
     padding-left: 0;
 
-    @include hover {
+    &:hover {
       border-bottom: 1px solid $color-default-white;
       outline: none;
       box-shadow: none;
     }
 
-    @include focus {
+    &:focus {
       border: 1px solid $color-default-white;
       border-radius: 0;
       outline: none;
       box-shadow: none;
     }
 
-    @include active {
+    &:active {
       border: 1px solid $color-default-white;
       border-radius: 0;
       outline: none;
       box-shadow: none;
     }
 
+    &:disabled,
     &--disabled {
       opacity: 0.4;
     }
