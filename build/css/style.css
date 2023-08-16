@@ -2240,6 +2240,9 @@ button,
   padding: 10px 0;
   color: #ffffff;
 }
+.page-header__logo:hover {
+  opacity: 0.7;
+}
 @media (max-width: 1199px) {
   .page-header__logo {
     padding: 5px 0;
@@ -2261,6 +2264,9 @@ button,
   line-height: 31px;
   font-weight: 600;
   letter-spacing: 0.78px;
+}
+.page-header__tel:hover {
+  opacity: 0.7;
 }
 @media (max-width: 1199px) {
   .page-header__tel {
@@ -2932,9 +2938,9 @@ button,
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 40px;
   }
 }
@@ -5147,6 +5153,9 @@ button,
   display: block;
   color: #ffffff;
   padding-top: 10px;
+}
+.page-footer__logo:hover {
+  opacity: 0.7;
 }
 @media (max-width: 1199px) {
   .page-footer__logo {
