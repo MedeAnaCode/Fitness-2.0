@@ -1,11 +1,12 @@
 .subscriptions-card {
   color: $color-sapphire;
   background-color: $color-default-white;
-  padding: 60px 77px 68px;
+  padding: 62px 17px 68px;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 360px;
+  min-width: 269px;
 
   @include vp-1199 {
     padding: 63px 118px 66px;
@@ -14,6 +15,8 @@
 
   @include vp-767 {
     padding: 51px 42px 55px;
+    width: 100%;
+    max-width: 100%;
   }
 
   h3 {
@@ -56,7 +59,7 @@
     border-width: 7px;
     border-style: solid;
     box-sizing: border-box;
-    padding: 53px 70px 61px;
+    padding: 55px 10px 61px;
     outline-offset: -7px;
 
     @include vp-1199 {
@@ -71,11 +74,11 @@
       background: $torch-red-to-dark-cerulean;
       color: $color-default-white;
       border: none;
-      padding: 24px 44px;
-      outline-offset: 4px;
+      padding: 25px 45px;
+      outline-offset: 2px;
 
       @include vp-1199 {
-        padding: 24px 37px;
+        padding: 25px 45px;
         width: 100%;
         align-self: stretch;
       }
@@ -161,18 +164,22 @@
 }
 
 .subscriptions-card__button {
-  align-self: stretch;
-  width: 100%;
+  padding: 23px 43px;
+  border: 2px solid $color-sapphire;
+
+  @include vp-1199 {
+    padding: 22px 43px;
+  }
 
   &:active {
     background: $torch-red-to-dark-cerulean;
     color: rgba($color-default-white, 0.7);
     border: none;
-    padding: 24px 44px;
-    outline-offset: 4px;
+    padding: 25px 45px;
+    outline-offset: 2px;
 
     @include vp-1199 {
-      padding: 24px 37px;
+      padding: 25px 45px;
       width: 100%;
       align-self: stretch;
     }

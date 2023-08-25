@@ -10,7 +10,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: space-between;
   padding-top: 30px;
 
   @include vp-1199 {
@@ -25,6 +24,7 @@
 .page-header__logo {
   padding: 10px 0;
   color: $color-default-white;
+  flex: none;
 
   &:hover {
     opacity: 0.7;
@@ -42,6 +42,12 @@
   }
 }
 
+.page-header__tel-links {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header__tel {
   font-family: "Alumni Sans", "Arial", sans-serif;
   color: $color-default-white;
@@ -50,8 +56,13 @@
   font-weight: 600;
   letter-spacing: 0.78px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @include vp-1199 {

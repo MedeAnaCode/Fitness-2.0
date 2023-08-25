@@ -122,5 +122,14 @@
     color: inherit;
     font: inherit;
     word-break: break-word;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $color-black-russian;
+    }
   }
 }

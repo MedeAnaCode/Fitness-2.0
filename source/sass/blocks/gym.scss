@@ -122,6 +122,7 @@
 
   picture {
     flex: none;
+    z-index: 1;
   }
 
   img {
@@ -165,7 +166,7 @@
   @include vp-767 {
     position: relative;
     width: 100%;
-    height: 167px;
+    height: auto;
     bottom: auto;
   }
 
@@ -178,8 +179,10 @@
   }
 
   iframe {
+    position: absolute;
     width: 364px;
     height: 228px;
+    z-index: 6;
 
     @include vp-1199 {
       width: 266px;
@@ -188,10 +191,25 @@
 
     @include vp-767 {
       width: 100%;
-      height: 167px;
+      top: 0;
+      left: 0;
+      border: 0;
+      right: 0;
+      height: 100%;
     }
   }
 }
+
+.gym__video-place {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 .gym__video-button {
   width: 100px;
@@ -209,6 +227,7 @@
   left: 0;
   bottom: 0;
   cursor: pointer;
+  z-index: 1;
 
   @include retina {
     background-image: url("../img/video-button-2x.png");

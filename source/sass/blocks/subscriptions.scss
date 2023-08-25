@@ -12,7 +12,7 @@
     background-image: url("../img/subscriptions-design-desktop-1x.png");
     position: absolute;
     right: 0;
-    bottom: -160px;
+    bottom: -150px;
 
     @include retina {
       content: "";
@@ -28,7 +28,7 @@
       width: 347px;
       height: 444px;
       background-image: url("../img/subscriptions-design-tablet-1x.png");
-      bottom: -130px;
+      bottom: -125px;
 
       @include retina {
         content: "";
@@ -50,7 +50,7 @@
 
   @include vp-1199 {
     padding-top: 100px;
-    padding-bottom: 100px;
+    padding-bottom: 102px;
   }
 
   @include vp-767 {
@@ -84,6 +84,8 @@
 }
 
 .subscriptions__tabs {
+  height: min-content;
+
   @include vp-1199 {
     padding: 0 118px;
   }

@@ -55,6 +55,7 @@
   background-color: $color-torch-red-2;
   color: $color-default-white;
   display: flex;
+  align-items: stretch;
 
   @include vp-1199 {
     justify-content: space-between;
@@ -82,12 +83,13 @@
     //тоже не как в макете
     line-height: 70px;
     margin: 0;
-    margin-bottom: 12px;
+    margin-top: -7px;
+    margin-bottom: 18px;
     word-break: break-word;
 
     @include vp-767 {
       text-align: center;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
     }
   }
 
@@ -96,30 +98,46 @@
     line-height: 25.2px;
     margin: 0;
     width: 189px;
-    margin-bottom: auto;
+    margin-bottom: 30px;
     word-break: break-word;
 
     @include vp-767 {
       text-align: center;
+      margin-bottom: 26px;
     }
   }
 
   picture {
-    flex: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @include vp-1199 {
-      width: 399px;
-      height: 462px;
+      width: 100%;
+      height: 100%;
     }
 
     @include vp-767 {
       width: 100%;
       height: auto;
+      top:0;
+      left:0;
+      transform: none;
+      position: relative;
     }
   }
 
   img {
-    flex: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     @include vp-1199 {
       width: 100%;
@@ -133,10 +151,38 @@
   }
 }
 
+.promotions__picture {
+  flex: none;
+  background-color: $color-neon-blue;
+  align-self: stretch;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  object-fit: cover;
+  min-width: 280px;
+  min-height: 462px;
+
+  @include vp-1199 {
+    min-width: 399px;
+    min-height: 462px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    min-height: 299px;
+    width: 100%;
+    height: auto;
+  }
+}
+
 .promotions__main-text {
   display: flex;
   flex-direction: column;
   padding: 34px 45px 45px;
+
+  @include vp-1199 {
+    padding: 34px 45px 42px;
+  }
 
   @include vp-767 {
     align-items: center;
@@ -169,7 +215,7 @@
   border-width: 7px;
   border-style: solid;
   color: $color-resolution-blue;
-  padding: 28px;
+  padding: 24px 28px 28px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -177,6 +223,7 @@
   @include vp-1199 {
     width: 47%;
     min-height: 211px;
+    padding: 24px 28px 26px;
   }
 
   @include vp-767 {
@@ -191,11 +238,11 @@
     //Тут в макете вообще line-height 150px
     line-height: 26px;
     margin: 0;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     word-break: break-word;
 
     @include vp-1199 {
-      margin-bottom: 6px;
+      margin-bottom: 10px;
     }
 
     @include vp-767 {
@@ -207,21 +254,36 @@
   p {
     line-height: 22.4px;
     margin: 0;
-    margin-bottom: auto;
+    margin-bottom: 30px;
     word-break: break-word;
+    width: 100%;
 
     @include vp-767 {
       text-align: center;
+      margin-bottom: 20px;
     }
   }
 }
 
 .promotions__link {
+  margin: 0;
+  margin-top: auto;
+  padding: 5px 10px;
+  margin-left: -10px;
+  align-self: start;
+
+  @include vp-767 {
+    align-self: center;
+    padding: 5px 10px;
+    margin-left: 0px;
+  }
+
   span {
     font-weight: 700;
     text-transform: uppercase;
     text-decoration: underline;
     margin: 0;
+    display: block;
     word-break: break-word;
 
     @include vp-767 {
@@ -248,20 +310,41 @@
       word-break: break-word;
     }
   }
-}
 
-.promotions__tablet-break {
-  display: none;
-
-  @include vp-1199 {
-    display: block;
+  &:hover {
+    opacity: 0.8;
   }
-}
 
-.promotions__mobile-break {
-  display: none;
+  &--blue {
+    &:focus {
+      border: 1px solid $color-sapphire;
 
-  @include vp-767 {
-    display: block;
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &--light {
+    &:focus {
+      border: 1px solid $color-default-white;
+
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+
+  &:active {
+    border: none;
+
+    span {
+      text-decoration: underline;
+    }
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
   }
 }
