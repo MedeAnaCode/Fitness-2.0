@@ -2,6 +2,18 @@
   background: $color-dark-cerulean-to-venetian-red;
 
   color: $color-default-white;
+
+  @include vp-767 {
+    padding-top: 15px;
+    background-image: url("../img/background-mobile-1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+
+    @include retina {
+      background-image: url("../img/background-mobile-2x.jpg");
+    }
+  }
 }
 
 .hero-block__container {
@@ -16,7 +28,8 @@
   }
 
   @include vp-767 {
-    padding: 110px 14px 78px;
+    //padding: 110px 14px 78px;
+    padding: 69px 14px 78px;
   }
 
   h2 {
@@ -47,7 +60,9 @@
       line-height: 86px;
       letter-spacing: 3.6px;
       width: 190px;
+      display: flex;
       margin-bottom: 23px;
+      vertical-align: top;
       grid-column: 3 / 4;
       height: min-content;
     }
@@ -155,10 +170,11 @@
   }
 
   @include vp-767 {
-    grid-row: 1 / 3;
+    grid-row: 2 / 3;
     grid-column: 2 / 3;
     margin-right: -13px;
-    margin-top: 123px;
+    margin-top: 76px;
+    margin-bottom: 20px;
   }
 
   li {

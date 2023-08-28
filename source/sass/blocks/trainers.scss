@@ -82,9 +82,9 @@
     }
   }
 
-  &:hover {
-    overflow: auto;
-  }
+  //&:hover {
+  //  overflow: auto;
+  //}
 
   &:hover::before {
     content: "";
@@ -107,6 +107,8 @@
     top: 0;
     bottom: auto;
     margin: 0 auto;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -118,6 +120,7 @@
   left: 0;
   margin: 0 auto;
   padding: 50px 4px 22px;
+  overflow: auto;
 
   @include vp-1199 {
     padding-top: 53px;
@@ -180,7 +183,7 @@
   transform: translate(0, 8px);
 
   @include vp-1199 {
-    transform: translate(0, -11px);
+    transform: translate(0, -23px);
   }
 
   @include vp-767 {
@@ -194,7 +197,7 @@
   transform: translate(0, 8px) rotate(180deg);
 
   @include vp-1199 {
-    transform: translate(0, -11px) rotate(180deg);
+    transform: translate(0, -23px) rotate(180deg);
   }
 
   @include vp-767 {

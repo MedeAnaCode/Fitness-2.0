@@ -17,21 +17,51 @@
   }
 
   @include vp-767 {
+    position: relative;
     padding-top: 15px;
+    background-image: url("../img/background-header-mobile-1x.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100% 100%;
+
+    @include retina {
+      background-image: url("../img/background-header-mobile-2x.jpg");
+    }
   }
 }
 
 .page-header__logo {
-  padding: 10px 0;
+  padding: 10px;
   color: $color-default-white;
   flex: none;
+  margin-left: -10px;
 
   &:hover {
-    opacity: 0.7;
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 1;
+    border: 1px solid $color-default-white;
+    padding: 9px;
+    outline-offset: 1px;
+  }
+
+  &:active {
+    opacity: 1;
+    border: none;
+    padding: 10px 10px 9px;
+    border-bottom: 1px solid $color-default-white;
+  }
+
+  &:disabled,
+  &--disabled {
+    opacity: 0.3;
   }
 
   @include vp-1199 {
     padding: 5px 0;
+    margin-left: 0;
     width: 82px;
     height: 17px;
   }
@@ -48,20 +78,37 @@
   flex-direction: column;
 }
 
-.page-header__tel {
+.page-header__tel-links a {
   font-family: "Alumni Sans", "Arial", sans-serif;
   color: $color-default-white;
   font-size: 26px;
   line-height: 31px;
   font-weight: 600;
   letter-spacing: 0.78px;
+  padding: 1px 10px;
+  margin-right: -10px;
 
-  &:hover,
+  &:hover {
+    opacity: 0.8;
+  }
+
   &:focus {
-    opacity: 0.7;
+    opacity: 1;
+    border: 1px solid $color-default-white;
+    padding: 0 9px;
+    outline-offset: 1px;
   }
 
   &:active {
+    opacity: 1;
+    outline-offset: 0;
+    padding: 1px 10px;
+    border: none;
+    text-decoration: underline;
+  }
+
+  &:disabled,
+  &--disabled {
     opacity: 0.3;
   }
 

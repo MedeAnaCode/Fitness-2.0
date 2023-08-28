@@ -50,7 +50,7 @@
     margin: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -124,15 +124,18 @@
     margin-bottom: 45px;
     margin-top: -10px;
     word-break: break-word;
+    max-width: 344px;
 
     @include vp-1199 {
       font-size: 12px;
       line-height: 18px;
       margin-bottom: 30px;
+      max-width: 202px;
     }
 
     @include vp-767 {
       margin-bottom: 28px;
+      max-width: 100%;
     }
   }
 }

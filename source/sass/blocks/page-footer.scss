@@ -95,6 +95,8 @@
 
   a:hover {
     border-bottom: 1px solid $color-default-white;
+    padding-bottom: 4px;
+    outline-offset: 1px;
 
     @include vp-767 {
       padding-bottom: 4px;
@@ -108,6 +110,7 @@
     box-shadow: none;
     margin: 0;
     padding: 4px 9px;
+    outline-offset: 1px;
 
     @include vp-767 {
       padding: 4px;
@@ -117,6 +120,15 @@
 
   a:active {
     border: none;
+    padding: 5px 0;
+    outline-offset: 0;
+    margin: 0 10px;
+
+    @include vp-767 {
+      padding: 5px;
+      outline-offset: 0;
+      margin: 0;
+    }
   }
 
   &--disabled {
@@ -137,6 +149,7 @@
   flex-wrap: wrap;
   gap: 11px;
   width: 97px;
+  flex: none;
 
   @include vp-767 {
     column-span: all;
