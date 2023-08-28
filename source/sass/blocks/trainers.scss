@@ -183,7 +183,7 @@
   transform: translate(0, 8px);
 
   @include vp-1199 {
-    transform: translate(0, -23px);
+    transform: translate(0, -8px);
   }
 
   @include vp-767 {
@@ -197,7 +197,7 @@
   transform: translate(0, 8px) rotate(180deg);
 
   @include vp-1199 {
-    transform: translate(0, -23px) rotate(180deg);
+    transform: translate(0, -8px) rotate(180deg);
   }
 
   @include vp-767 {
